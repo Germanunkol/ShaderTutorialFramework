@@ -28,8 +28,12 @@ function love.load()
 
 	love.graphics.setFont( love.graphics.newFont(14) )
 
-	Shaders:addShader( "outline", "o" )
-	Shaders:addShader( "gaussian", "g" )
+	-- To add a new "Shader", use a line similar to the following.
+	-- This will not really create a shader, only display a text at the top which can be used
+	-- to disable and enable shaders. In order for this to work, functions using shaders MUST
+	-- poll Shader:isEnabled( "outline" ) or similar before using shaders.
+	--Shaders:addShader( "outline", "o" )
+	--Shaders:addShader( "gaussian", "g" )
 end
 
 function love.update( dt )
