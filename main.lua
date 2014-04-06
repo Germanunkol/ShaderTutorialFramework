@@ -34,6 +34,7 @@ function love.load()
 	-- poll Shader:isEnabled( "outline" ) or similar before using shaders.
 	--Shaders:addShader( "outline", "o" )
 	--Shaders:addShader( "gaussian", "g" )
+	
 end
 
 function love.update( dt )
@@ -45,6 +46,8 @@ function love.draw()
 	chars[1]:draw()
 	chars[2]:draw()
 	Shaders:draw()
+
+	love.graphics.print( love.timer.getFPS(), 10, love.graphics.getHeight() - 24 )
 end
 
 function love.keypressed( key )
